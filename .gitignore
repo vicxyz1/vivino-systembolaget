@@ -1,5 +1,5 @@
 node_modules/
 .cache/
-
+.idea
 public/*
 !public/manifest.json

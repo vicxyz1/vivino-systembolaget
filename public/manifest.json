@@ -1,17 +1,27 @@
 {
-  "name": "Vivino rating for Systembolaget",
-  "version": "1.0",
-  "description": "Show wine rating on systembolaget website",
+  "name": "Vivino rating for shops",
+  "version": "2.0",
+  "description": "Show wine rating on wine shop website",
   "manifest_version": 2,
-  "permissions": ["*://www.vivino.com/*", "unlimitedStorage", "activeTab"],
+  "permissions": [
+    "*://www.vivino.com/*",
+    "unlimitedStorage",
+    "activeTab"
+  ],
   "content_scripts": [
     {
-      "matches": ["https://beta.systembolaget.se/*"],
-      "js": ["contentScript.js"]
+      "matches": [
+        "https://club.unvinpezi.ro/oferte*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
     }
   ],
   "background": {
-    "scripts": ["bgScript.js"],
+    "scripts": [
+      "bgScript.js"
+    ],
     "persistent": false
   }
 }

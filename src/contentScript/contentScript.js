@@ -2,13 +2,6 @@ import debounce from "lodash/debounce";
 import getRating from "./api/getRating";
 
 function initializeScript() {
-  const shouldInititialize = window.location.search.includes(
-    "categoryLevel1=Vin"
-  );
-
-  if (!shouldInititialize) {
-    return;
-  }
 
   appendRatings();
 
@@ -18,7 +11,7 @@ function initializeScript() {
 
 function appendRatings() {
   const wineListItems = document.querySelectorAll(
-    'a[href*="/vin"]:not(.navbar-level-1-link)'
+    'div.card-body'
   );
 
   wineListItems.forEach((item) => {
@@ -30,7 +23,8 @@ function appendRatings() {
 
 async function appendRating(element) {
   element.parentElement.style.position = "relative";
-  const wineName = element.querySelector("h3").innerText;
+  const wineName = element.querySelector("h2 > small").innerText + ' ' +element.querySelector("h2 > a").innerText;
+  console.log(wineName);
 
   try {
     const { score, numOfReviews, url } = await getRating(wineName);

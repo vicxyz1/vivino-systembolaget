@@ -1,9 +1,9 @@
-# vivino-systembolaget
-Chrome extension to show vivino score on systembolaget website
+# vivino-score
+Chrome extension to show vivino score on https://club.unvinpezi.ro/oferte website
 
-![Screenshot](https://lazyd3v.com/images/systembolaget-screen.png "Screenshot")
+![Screenshot](https://www.mediashare.ro/UnVinPeZi.png "Screenshot")
 
-More info about this extension could be found [in my blog](https://lazyd3v.com/posts/vivino-x-systembolaget/)
+
 
 ## How to use?
 1. Execute `yarn` to install dependencies
